@@ -13,7 +13,7 @@
 
 $(function(){
   //--VARIABLES
-  var speed=0.38;
+  var speed=0.7;
   var height_diff=-190; //negative number is higher up the page
   var bottom_thresh=3855;
   var iphone_top, $iphone,$ff1,$ff2,$ff3,$ff4,$ff5,$ib1,$ib2,$ib3,$ib4,$tweets,$onscreen;

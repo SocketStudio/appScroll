@@ -405,10 +405,6 @@ td {
 }
 
 
-.lrdiscoverwidget .site {
-  padding: 30px 10px 10px;
-}
-
 
 body {
   background: transparent url("/assets/splash_page/background_noise.gif") repeat;
@@ -595,22 +591,24 @@ h1#secondmenu em {
 }
 
 
-#iphone_img {
-  xposition: absolute;
+img#iphone_img {
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 70;
+  z-index: 100;
+  width:300px;
+  max-width:300px;
 }
 
 
 #screen {
   position: absolute;
-  top: 101px;
-  left: 22px;
-  width: 200px;
-  height: 240px;
+  top: 105px;
+  left: 26px;
+  width:251px;
+  height:378px;
   overflow: hidden;
-  z-index: 80;
+  z-index: 50;
 }
 
 
@@ -618,7 +616,7 @@ h1#secondmenu em {
   position: absolute;
   top: 0;
   left: 0;
-  width: 212px;
+  width:251px;
 }
 
 
@@ -734,6 +732,11 @@ em.cyan {
   left: 0;
 }
 
+img.iphone_foreground{
+  width:251px;
+  height:378px;
+}
+
 
 #iphone_foreground_0 {
   display: block;
@@ -839,125 +842,6 @@ input[type=submit]:hover {
   border: 1px solid #c0b7ad;
 }
 
-/* ------- LAUNCH ROCK ------------- */
-/* for IE */
-
-.oldie .site, .oldie #sign_up_form {
-  border: 1px solid #bbb;
-  background: #fff;
-}
-
-
-.lrdiscoverwidget {
-  margin-bottom: 100px;
-}
-
-
-.lrdiscoverwidget .site {
-  padding: 10px 10px;
-}
-
-
-.lrdiscoverwidget .site-desc {
-  padding-left: 32px;
-  text-align: left;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-  color: #53392E;
-}
-
-
-.lrdiscoverwidget p.site-desc {
-  padding-right: 35px;
-  display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-
-
-.lrdiscoverwidget p.site-desc em {
-  color: #649640;
-  font-style: normal;
-}
-
-
-.lrdiscoverwidget .site-desc h2, #footer .lrdiscoverwidget .site-desc h2, .invite-label h2 {
-  margin: 10px 0;
-  font-size: 1.8em;
-  font-weight: 200;
-  color: #649640;
-}
-
-
-.oldie .lrdiscoverwidget .site-desc h2 {
-  padding-top: 10px;
-}
-
-
-.lrdiscoverwidget .inviteform .submit {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #ffffff;
-  padding: 5px 10px;
-  background: -moz-linear-gradient(top, #d4372c 0%, #d4372c);
-  background: -webkit-gradient(linear, left top, left bottom, from(#d4372c), to(#d4372c));
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border: 1px solid #d4372c;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
-  width: inherit;
-  line-height: inherit;
-}
-
-
-.oldie #go, .oldie .lrdiscoverwidget .inviteform .submit {
-  filter: none;
-  background: #d4372c;
-  border: 1px solid #d4372c;
-  padding: 0;
-  margin: 0;
-}
-
-
-.lrdiscoverwidget .inviteform .submit:hover {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #ffffff;
-  padding: 5px 10px;
-  background: -moz-linear-gradient(top, #649640 0%, #71a648);
-  background: -webkit-gradient(linear, left top, left bottom, from(#649640), to(#71a648));
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border: 1px solid #58803a;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
-}
-
-
-.lrdiscoverwidget .share-link .field-holder {
-  background: #fff;
-  color: #649640;
-  border-style: dashed;
-}
-
-
-.lrdiscoverwidget .share-link .field-holder .field {
-  color: #649640;
-}
-
-
-.lrdiscoverwidget .like {
-  padding: 20px 0 10px;
-  width: inherit;
-}
 
 
 .live-stats {
@@ -1000,10 +884,6 @@ input[type=submit]:hover {
   padding-bottom: 10px;
 }
 
-
-.lrcontent a, .lrcontent a:link, .lrcontent a:visited, .lrcontent a:hover, .lrcontent a:active {
-  color: #d4372c;
-}
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
@@ -1135,10 +1015,6 @@ input[type=submit]:hover {
     margin-top: 50px;
   }
 
-  
-  .lrdiscoverwidget .site {
-    width: inherit;
-  }
 
   
   .not_mobile {
@@ -1210,40 +1086,6 @@ input[type=submit]:hover {
   }
 
   
-  .light-c .site {
-    background: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: none;
-  }
-
-  
-  .lrdiscoverwidget .site {
-    width: inherit;
-    margin: 0;
-    padding: 0;
-  }
-
-  
-  .lrdiscoverwidget .inviteform .field {
-    width: inherit;
-  }
-
-  
-  .lrdiscoverwidget .inviteform .submit {
-    display: block;
-  }
-
-  
-  .lrdiscoverwidget .inviteform .field {
-    margin: 0px;
-  }
-
-  
-  .lrdiscoverwidget .site-desc {
-    padding-left: 0px;
-  }
 }
 /* ==|== print styles =======================================================
    Print styles.
