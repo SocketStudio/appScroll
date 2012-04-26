@@ -1,336 +1,307 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]>
-<html class="no-js ie6 oldie" lang="en">
-  <![endif]-->
-  <!--[if IE 7]>
-  <html class="no-js ie7 oldie" lang="en">
-    <![endif]-->
-    <!--[if IE 8]>
-    <html class="no-js ie8 oldie" lang="en">
-      <![endif]-->
-      <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-      <!--[if gt IE 8]>
-      <!-->
-      <html class="no-js" lang="en">
-        <!--<![endif]-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-        <meta charset="utf-8">
-        <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>SecondMenu: Your restaurant has an app</title>
-        <meta name="description" content="SecondMenu will transform your restaurant experience.  
-    Are you a restauranteur?  Use SecondMenu to manage your restaurant's digital life.  
-    Love to dine out?  SecondMenu can help you enjoy better food!  SecondMenu - Your restaurant has an app.">
-        <meta name="author" content="SecondMenu">
-        <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-        <!-- Facebook and OpenGraph -->
-        <meta property="og:title" content="SecondMenu" />
-        <meta property="og:type" content="company" />
-        <meta property="og:site_name" content="SecondMenu" />
-        <meta property="og:url" content="http://secondmenu.com" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>App Scroll</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <!-- Facebook and OpenGraph -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:url" content="" />
 
-        <meta property="og:image" content="http://secondmenu.comimg/facebook_iphone.png" />
-        <meta property="og:description" content="SecondMenu will transform your restaurant experience.  
-    Are you a restauranteur?  Use SecondMenu to manage your restaurant's digital life.  
-    Love to dine out?  SecondMenu can help you enjoy better food!  
-    SecondMenu is coming soon.  Get an invite!  SecondMenu - Your restaurant has an app." />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
 
-        <meta property="fb:admins" content="716430703,48304418">
-        <meta property="og:locale" content="en_US">
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-        <!-- CSS: implied media=all -->
-        <!-- CSS concatenated and minified via ant build script-->
-        <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-        <link href="css/1140.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-        <link href="css/styles.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <meta property="fb:admins" content="">
+  <meta property="og:locale" content="en_US">
 
-        <!--[if gte IE 5.5]>
-        <![if lt IE 7]>
-        <style type="text/css">
-    #iphone {
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href="css/1140.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <!--[if gte IE 5.5]>
+    <![if lt IE 7]>
+      <style type="text/css">
+      #iphone {
       /* IE5.5+/Win - this is more specific than the IE 5.0 version */
       top: expression( ( 30 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
-    }
-    </style>
-        <![endif]>
-        <![endif]-->
-
-        <!-- end CSS-->
+      }
+      </style>
+    <![endif]>
+  <![endif]-->
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 
 <body>
-        <div id="fb-root"></div>
-        <script type="text/javascript">
-(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=179987938743503";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+  <div id="fb-root"></div>
+  <script type="text/javascript">
+    (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=179987938743503";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-        <div class="container clearfix inset_shadow" id="top_container">
-          <div class="row" id="head">
-            <h1 class="mobile"> <em>Second</em>
-              Menu
-            </h1>
-            <img class="mobile" id="mobile_banner" src="img/mobile_banner.png" />
+          <div class="container clearfix inset_shadow" id="top_container">
+            <div class="row" id="head">
+              <h1 class="mobile"> <em>Second</em>
+                Menu
+              </h1>
+              <img class="mobile" id="mobile_banner" src="img/mobile_banner.png" />
 
-            <img class="not_mobile" id="banner_left" src="img/banner_left2.png" />
+              <img class="not_mobile" id="banner_left" src="img/banner_left2.png" />
 
+              <!--<div class="onecol"></div>
+            -->
+            <!-- end onecol -->
+            <div class="sevencol">
+              <img class="not_mobile" id="hot_tamale" src="img/hot_tamale.png" />
+              <div id="invite"></div>
+
+              <div class="signup_form" id="signup_form_top">
+
+                <div rel="W90YUKOY" class="lrdiscoverwidget" data-logo="off" data-background="off" data-share-url="http://localhost:3000/" data-css="/assets/splash_page/styles.css"></div>
+
+                <script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
+
+              </div>
+              <!--end signup form --> </div>
+            <!-- end sixcol -->
+
+            <div class="fourcol" id="phone_column">
+              <img alt="Banner_right" class="not_mobile" id="banner_right" src="img/banner_right.png" />
+
+              <div id="iphone" class="not_mobile">
+                <img id="iphone_img" src="img/iPhone4S-white.png" width="300" />
+                <div id="screen">
+                  <div id="onscreen">
+                    <img class="iphone_foreground" id="iphone_foreground_0" src="img/iPhone-screen1.jpg" />
+                    <img class="iphone_foreground" id="iphone_foreground_1" src="img/iPhone-screen2.jpg" />
+                    <img class="iphone_foreground" id="iphone_foreground_2" src="img/iPhone-screen3.jpg" />
+                    <img  class="iphone_foreground" id="iphone_foreground_3" src="img/iPhone-screen1.jpg" />
+                    <img  class="iphone_foreground" id="iphone_foreground_4" src="img/iPhone-screen2.jpg" />
+                    <div id="tweets" class='iphone_foreground'></div>
+                    <!--tweets-->
+                  </div>
+                  <!--onscreen-->
+                </div>
+                <!--screen-->
+
+                <div id="fb">
+                  <div class="fb-like" data-href="secondmenu.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+                  <!--.fb-like-->
+                </div>
+                <!--#fb-->
+
+                <h1 id="secondmenu"> <em>Second</em>
+                  Menu
+                </h1>
+
+              </div>
+              <!--iphone-->
+            </div>
+            <!-- end threecol -->
+          </div>
+          <!-- end head -->
+        </div>
+        <!-- end container -->
+
+        <div class="container ">
+          <div class="row feature" id="section_1">
             <!--<div class="onecol"></div>
           -->
           <!-- end onecol -->
           <div class="sevencol">
-            <img class="not_mobile" id="hot_tamale" src="img/hot_tamale.png" />
-            <div id="invite"></div>
-
-            <div class="signup_form" id="signup_form_top">
-
-              <div rel="W90YUKOY" class="lrdiscoverwidget" data-logo="off" data-background="off" data-share-url="http://localhost:3000/" data-css="/assets/splash_page/styles.css"></div>
-
-              <script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
-
+            <div class="feature_image">
+              <img alt="Low_cost" class="feature_foreground" id="feature_foreground_1" src="img/low_cost.png" />
             </div>
-            <!--end signup form --> </div>
+            <!-- feature_image -->
+            <div class="feature_text">
+              <h3>
+                <em class="orange">Ridiculously</em>
+                low cost
+              </h3>
+              <p>
+                SecondMenu gets you on every smartphone platform for a tiny fraction of the cost of building your own app. Wow your customers and grow your business for less than the cost of an entree.
+              </p>
+            </div>
+            <!-- feature_text --> </div>
           <!-- end sixcol -->
+          <div class="fourcol"></div>
+          <!-- end threecol --> </div>
+        <!-- end feature_1 --> </div>
+      <!-- end white_background -->
 
-          <div class="fourcol" id="phone_column">
-            <img alt="Banner_right" class="not_mobile" id="banner_right" src="img/banner_right.png" />
-
-            <div id="iphone" class="not_mobile">
-              <img id="iphone_img" src="img/iPhone4S-white.png" width="300" />
-              <div id="screen">
-                <div id="onscreen">
-                  <img class="iphone_foreground" id="iphone_foreground_0" src="img/iPhone-screen1.jpg" />
-                  <img class="iphone_foreground" id="iphone_foreground_1" src="img/iPhone-screen2.jpg" />
-                  <img class="iphone_foreground" id="iphone_foreground_2" src="img/iPhone-screen3.jpg" />
-                  <img  class="iphone_foreground" id="iphone_foreground_3" src="img/iPhone-screen1.jpg" />
-                  <img  class="iphone_foreground" id="iphone_foreground_4" src="img/iPhone-screen2.jpg" />
-                  <div id="tweets" class='iphone_foreground'></div>
-                  <!--tweets-->
-                </div>
-                <!--onscreen-->
-              </div>
-              <!--screen-->
-
-              <div id="fb">
-                <div class="fb-like" data-href="secondmenu.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
-                <!--.fb-like-->
-              </div>
-              <!--#fb-->
-
-              <h1 id="secondmenu"> <em>Second</em>
-                Menu
-              </h1>
-
-            </div>
-            <!--iphone-->
-          </div>
-          <!-- end threecol -->
-        </div>
-        <!-- end head -->
-      </div>
-      <!-- end container -->
-
-      <div class="container ">
-        <div class="row feature" id="section_1">
+      <div class="container">
+        <div class="row feature" id="section_2">
           <!--<div class="onecol"></div>
         -->
         <!-- end onecol -->
         <div class="sevencol">
           <div class="feature_image">
-            <img alt="Low_cost" class="feature_foreground" id="feature_foreground_1" src="img/low_cost.png" />
+            <img alt="Viral" class="feature_foreground" id="feature_foreground_2" src="img/viral.png" />
           </div>
           <!-- feature_image -->
           <div class="feature_text">
             <h3>
-              <em class="orange">Ridiculously</em>
-              low cost
+              Let your menu go
+              <em class="blue">viral</em>
             </h3>
             <p>
-              SecondMenu gets you on every smartphone platform for a tiny fraction of the cost of building your own app. Wow your customers and grow your business for less than the cost of an entree.
+              SecondMenu gives you a new and amazing way to spread your menu items and your restaurant virally. You won’t believe how simple it is to engage your customers on social media with SecondMenu.
             </p>
           </div>
           <!-- feature_text --> </div>
         <!-- end sixcol -->
         <div class="fourcol"></div>
         <!-- end threecol --> </div>
-      <!-- end feature_1 --> </div>
-    <!-- end white_background -->
+      <!-- end feature_2 --> </div>
+    <!-- end no_background -->
 
     <div class="container">
-      <div class="row feature" id="section_2">
+      <div class="row feature" id="section_3">
         <!--<div class="onecol"></div>
       -->
       <!-- end onecol -->
       <div class="sevencol">
         <div class="feature_image">
-          <img alt="Viral" class="feature_foreground" id="feature_foreground_2" src="img/viral.png" />
+          <img alt="Analytics" class="feature_foreground" id="feature_foreground_3" src="img/analytics.png" />
         </div>
         <!-- feature_image -->
         <div class="feature_text">
           <h3>
-            Let your menu go
-            <em class="blue">viral</em>
+            <em class="green">First class</em>
+            analytics
           </h3>
           <p>
-            SecondMenu gives you a new and amazing way to spread your menu items and your restaurant virally. You won’t believe how simple it is to engage your customers on social media with SecondMenu.
+            Find out what your customers like and rock their tastebuds. With sophisticated analytics about the things that are engaging your customers, you can grow your business by leaps and bounds.
           </p>
         </div>
         <!-- feature_text --> </div>
       <!-- end sixcol -->
       <div class="fourcol"></div>
       <!-- end threecol --> </div>
-    <!-- end feature_2 --> </div>
-  <!-- end no_background -->
+    <!-- end feature_3 -->
+  </div>
+  <!-- end white_background -->
 
   <div class="container">
-    <div class="row feature" id="section_3">
+    <div class="row feature" id="section_4">
       <!--<div class="onecol"></div>
     -->
     <!-- end onecol -->
     <div class="sevencol">
       <div class="feature_image">
-        <img alt="Analytics" class="feature_foreground" id="feature_foreground_3" src="img/analytics.png" />
+        <img alt="Every_screen" class="feature_foreground" id="feature_foreground_4" src="img/every_screen.png" />
       </div>
       <!-- feature_image -->
       <div class="feature_text">
         <h3>
-          <em class="green">First class</em>
-          analytics
+          <em class="orange">Stunning</em>
+          on every screen
         </h3>
         <p>
-          Find out what your customers like and rock their tastebuds. With sophisticated analytics about the things that are engaging your customers, you can grow your business by leaps and bounds.
+          SecondMenu is designed to look stunning on every device. iPhone, iPad, Android, Blackberry - with SecondMenu you instantly have a presence on every platform.
         </p>
       </div>
       <!-- feature_text --> </div>
     <!-- end sixcol -->
     <div class="fourcol"></div>
-    <!-- end threecol --> </div>
-  <!-- end feature_3 -->
-</div>
-<!-- end white_background -->
+    <!-- end threecol -->
+  </div>
+  <!-- end feature_4 -->
+  </div>
+  <!-- end no_background -->
 
-<div class="container">
-  <div class="row feature" id="section_4">
+  <div class="container drop_shadow">
+  <div class="row feature" id="section_5">
     <!--<div class="onecol"></div>
   -->
   <!-- end onecol -->
   <div class="sevencol">
     <div class="feature_image">
-      <img alt="Every_screen" class="feature_foreground" id="feature_foreground_4" src="img/every_screen.png" />
+      <a href="http://www.twitter.com/secondmenu">
+        <img alt="Follow_us" class="feature_foreground" id="feature_foreground_5" src="img/follow_us.png" />
+      </a>
     </div>
     <!-- feature_image -->
     <div class="feature_text">
       <h3>
-        <em class="orange">Stunning</em>
-        on every screen
+        <em class="cyan">Learn</em>
+        more about us
       </h3>
       <p>
-        SecondMenu is designed to look stunning on every device. iPhone, iPad, Android, Blackberry - with SecondMenu you instantly have a presence on every platform.
+        Follow us on
+        <a href="http://www.twitter.com/secondmenu">Twitter</a>
+        , or check out our
+        <a href="http://secondmenu.com/blog">blog</a>
+        . Find out what's happening with SecondMenu and learn about the intersection of food and tech culture.
       </p>
     </div>
-    <!-- feature_text --> </div>
+    <!-- feature_text -->
+  </div>
   <!-- end sixcol -->
   <div class="fourcol"></div>
   <!-- end threecol -->
-</div>
-<!-- end feature_4 -->
-</div>
-<!-- end no_background -->
+  </div>
+  <!-- end feature_5 -->
+  </div>
+  <!-- end container -->
 
-<div class="container drop_shadow">
-<div class="row feature" id="section_5">
+  <div class=" dark_organic_background inset_shadow">
+  <div class="row" id="footer">
   <!--<div class="onecol"></div>
--->
-<!-- end onecol -->
-<div class="sevencol">
-  <div class="feature_image">
-    <a href="http://www.twitter.com/secondmenu">
-      <img alt="Follow_us" class="feature_foreground" id="feature_foreground_5" src="img/follow_us.png" />
-    </a>
-  </div>
-  <!-- feature_image -->
-  <div class="feature_text">
-    <h3>
-      <em class="cyan">Learn</em>
-      more about us
-    </h3>
+  -->
+  <!-- end twocol -->
+  <div class="sevencol">
+  <h1>SecondMenu</h1>
+  <h2>Your Restaurant has an app</h2>
+
+  <div id="signup_form_footer">
+
+    <h4>Get an Invite</h4>
     <p>
-      Follow us on
-      <a href="http://www.twitter.com/secondmenu">Twitter</a>
-      , or check out our
-      <a href="http://secondmenu.com/blog">blog</a>
-      . Find out what's happening with SecondMenu and learn about the intersection of food and tech culture.
+      SecondMenu is a brand new and amazing way to manage your restaurant's digital life.
+        Be one of the first to get access.
     </p>
+
+    <a id="go" href="#signup_form_top">Go</a>
+    <div class="clear clearfix"></div>
   </div>
-  <!-- feature_text -->
-</div>
-<!-- end sixcol -->
-<div class="fourcol"></div>
-<!-- end threecol -->
-</div>
-<!-- end feature_5 -->
-</div>
-<!-- end container -->
+  <!--end signup form -->
 
-<div class=" dark_organic_background inset_shadow">
-<div class="row" id="footer">
-<!--<div class="onecol"></div>
--->
-<!-- end twocol -->
-<div class="sevencol">
-<h1>SecondMenu</h1>
-<h2>Your Restaurant has an app</h2>
+  <div id="copyright">
+    Copyright
+    <a herf="http://socketstudio.com" target="_blank">Socket Studio</a>
+    2011, All Rights Reserved.
+    <a>Privacy Policy</a>
+  </div>
+  </div>
+  <!-- end sixcol -->
+  <div id="footer_slogan" class="threecol last">
+  <img alt="Footer_slogan" src="img/footer_slogan.png" />
+  </div>
+  <!-- threecol last -->
 
-<div id="signup_form_footer">
+  </div>
+  <!-- row footer -->
+  </div>
+  <!-- dark_organic_background -->
 
-  <h4>Get an Invite</h4>
-  <p>
-    SecondMenu is a brand new and amazing way to manage your restaurant's digital life.
-      Be one of the first to get access.
-  </p>
-
-  <a id="go" href="#signup_form_top">Go</a>
-  <div class="clear clearfix"></div>
-</div>
-<!--end signup form -->
-
-<div id="copyright">
-  Copyright
-  <a herf="http://socketstudio.com" target="_blank">Socket Studio</a>
-  2011, All Rights Reserved.
-  <a>Privacy Policy</a>
-</div>
-</div>
-<!-- end sixcol -->
-<div id="footer_slogan" class="threecol last">
-<img alt="Footer_slogan" src="img/footer_slogan.png" />
-</div>
-<!-- threecol last -->
-
-</div>
-<!-- row footer -->
-</div>
-<!-- dark_organic_background -->
-
-<!-- JavaScript at the bottom for fast page loading -->
-<script src="http://bit.ly/jquery-latest" type="text/javascript"></script>
-<script src="js/waypoints.min.js?body=1" type="text/javascript"></script>
-<script src="js/jquery.tweet.js?body=1" type="text/javascript"></script>
-<script src="js/scripts.js?body=1" type="text/javascript"></script>
-
-<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-<!--[if lt IE 7 ]>
-<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-<![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/libs/waypoints.min.js" type="text/javascript"></script>
+  <script src="js/libs/jquery.tweet.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
