@@ -396,34 +396,13 @@ td {
   vertical-align: top;
 }
 
-/* ==== primary styles =====================================================
-   Second Menu: 
+/* ==== App Scroll =====================================================
+   primary styles
    ========================================================================== */
 
 .mobile {
   display: none;
 }
-
-
-
-body {
-  background: transparent url("/assets/splash_page/background_noise.gif") repeat;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-  color: #53392e;
-  font-size: 16px;
-  padding-top: 0px;
-}
-
-
-h4 {
-  font-size: 1.8em;
-  font-weight: 200;
-  color: #649640;
-}
-
-/* new clearfix */
 
 .clearfix:after {
   visibility: hidden;
@@ -439,79 +418,15 @@ h4 {
   zoom: 1;
 }
 
-/* IE6 */
 
 *:first-child + html .clearfix {
   zoom: 1;
 }
 
-/* IE7 */
-
-.container {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 95px;
-  padding-bottom: 95px;
-  border-top: solid 1px white;
-  border-bottom: solid 1px #ddd;
-}
-
-
-#top_container {
-  border-bottom: none;
-  padding-top: 40px;
-  padding-bottom: 0px;
-}
-
-
 .inset_shadow {
   -webkit-box-shadow: inset 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
-}
-
-
-.dark_organic_background {
-  padding-top: 30px;
-}
-
-
-#footer {
-  height: 700px;
-}
-
-
-#footer h2 {
-  margin-top: -5px;
-  margin-bottom: 10px;
-}
-
-
-#copyright {
-  font-size: .8em;
-  margin-top: 70px;
-}
-
-
-#banner_left {
-  position: absolute;
-  top: 95px;
-  left: -40px;
-  z-index: 0;
-}
-
-
-.threecol {
-  position: relative;
-}
-
-
-#banner_right {
-  position: absolute;
-  top: 85px;
-  left: -30px;
-  z-index: 300;
-  max-width: 1053px;
 }
 
 
@@ -530,15 +445,10 @@ h3 {
   font-size: 2em;
 }
 
-
-#head {
-  position: relative;
-  overflow: visible;
-}
-
-
-body {
-  overflow-x: hidden;
+h4 {
+  font-size: 1.8em;
+  font-weight: 200;
+  color: #649640;
 }
 
 
@@ -552,36 +462,116 @@ a:hover {
 }
 
 
-#title {
-  text-align: center;
+em.orange {
+  font-style: normal;
+  color: #d4372c;
+}
+
+
+em.blue {
+  font-style: normal;
+  color: #3883C5;
+}
+
+
+em.green {
+  font-style: normal;
+  color: #649640;
+}
+
+
+em.cyan {
+  font-style: normal;
+  color: #32ACD8;
+}
+
+
+/* ==== App Scroll =====================================================
+   structure styles
+   ========================================================================== */
+
+
+body {
+  background: transparent url("/assets/splash_page/background_noise.gif") repeat;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: #53392e;
+  font-size: 16px;
+  padding-top: 0px;
+  overflow-x: hidden;
+}
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  border-top: solid 1px white;
+  border-bottom: solid 1px #ddd;
+}
+
+.threecol {
   position: relative;
-  top: 80px;
-  font-size: 4.5em;
 }
 
 
-h1#title em {
-  color: #649640;
-  font-style: normal;
+#head {
+  position: relative;
+  overflow: visible;
 }
 
 
-#iphone {
-  position: fixed;
-  top: 40px;
-  z-index: 50;
+#top_container {
+  border-bottom: none;
+  padding-top: 40px;
+  padding-bottom: 0px;
+}
+
+footer {
+  height: 700px;
 }
 
 
-h1#secondmenu {
-  font-size: 35px;
+footer h2 {
+  margin-top: -5px;
+  margin-bottom: 30px;
 }
 
 
-h1#secondmenu em {
-  color: #649640;
-  font-style: normal;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dark_organic_background {
+  padding-top: 30px;
 }
+
+
+
+
+
+#copyright {
+  font-size: .8em;
+  margin-top: 70px;
+}
+
+
 
 
 #fb {
@@ -590,8 +580,16 @@ h1#secondmenu em {
   bottom: 7px;
 }
 
+/* ==== App Scroll =====================================================
+   iphone scrolling area
+   ========================================================================== */
+#iphone_area {
+  position: fixed;
+  top: 40px;
+  z-index: 50;
+}
 
-img#iphone_img {
+#iphone_img {
   position: absolute;
   top: 0;
   left: 0;
@@ -620,129 +618,22 @@ img#iphone_img {
 }
 
 
-#signup_form_top {
-  margin-top: 130px;
-  margin-left: 50px;
-}
-
-
-#signup_form_footer {
-  background: rgba(255, 255, 255, 0.3);
-  color: black;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px 6px 6px 6px;
-  width: 348px;
-  padding: 30px;
-  cursor: pointer;
-}
-
-
-.oldie #signup_form_footer {
-  background: #eee;
-}
-
-
-#footer h2 {
-  margin-bottom: 30px;
-}
-
-
-#signup_form_footer #go {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: white;
-  padding: 5px 10px;
-  background: -moz-linear-gradient(top, #d4372c 0%, #d4372c);
-  background: -webkit-gradient(linear, left top, left bottom, from(#d4372c), to(#d4372c));
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border: 1px solid #D4372C;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
-  width: 27px;
-  margin-top: 10px;
-  display: block;
-  line-height: inherit;
-  border-image: initial;
-  text-decoration: none;
-  float: right;
-}
-
-
-.feature .sixcol, .feature .threecol {
-  position: relative;
-}
-
-
-.feature_text {
-  width: 75%;
-  margin: 0 auto;
-}
-
-
-.feature_image {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
-.feature_text p {
-  line-height: 1.4em;
-}
-
-
-em.orange {
-  font-style: normal;
-  color: #d4372c;
-}
-
-
-em.blue {
-  font-style: normal;
-  color: #3883C5;
-}
-
-
-em.green {
-  font-style: normal;
-  color: #649640;
-}
-
-
-em.cyan {
-  font-style: normal;
-  color: #32ACD8;
-}
-
-
-.iphone_background {
-  opacity: 1;
-}
-
-
-.iphone_foreground {
+.app_screen {
   display: none;
   position: absolute;
   top: -9999999px;
   left: 0;
-}
-
-img.iphone_foreground{
   width:251px;
   height:378px;
 }
 
 
-#iphone_foreground_0 {
+#app_screen_0 {
   display: block;
   top: 0;
 }
 
+/* --- Twitter Styles -- */
 
 #tweets {
   position: absolute;
@@ -792,6 +683,83 @@ img.iphone_foreground{
   text-decoration: none;
   color: #888;
 }
+
+
+#signup_form_top {
+  margin-top: 130px;
+  margin-left: 50px;
+}
+
+
+#signup_form_footer {
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px 6px 6px 6px;
+  width: 348px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+
+.oldie #signup_form_footer {
+  background: #eee;
+}
+
+
+
+
+
+#signup_form_footer #go {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: white;
+  padding: 5px 10px;
+  background: -moz-linear-gradient(top, #d4372c 0%, #d4372c);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d4372c), to(#d4372c));
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #D4372C;
+  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(87, 87, 87, 0);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3);
+  width: 27px;
+  margin-top: 10px;
+  display: block;
+  line-height: inherit;
+  border-image: initial;
+  text-decoration: none;
+  float: right;
+}
+
+
+.feature .sixcol, .feature .threecol {
+  position: relative;
+}
+
+
+.feature_text {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+.feature_image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.feature_text p {
+  line-height: 1.4em;
+}
+
+
+
 
 
 #new_prospect input {
@@ -968,9 +936,6 @@ input[type=submit]:hover {
 @media only screen and (max-width: 768px) {
   /* Style adjustments for viewports 770px and over go here */
   
-  #mobile_banner {
-    margin: 0 auto;
-  }
 
   
   #signup_form_top {
@@ -1006,7 +971,7 @@ input[type=submit]:hover {
   }
 
   
-  #footer h1, #footer h2 {
+  footer h1, footer h2 {
     text-align: center;
   }
 
@@ -1065,7 +1030,7 @@ input[type=submit]:hover {
 @media only screen and (max-width: 480px) {
   /* Style adjustments for viewports 480px and under go here */
   
-  h1.mobile, #footer h1 {
+  h1.mobile, footer h1 {
     font-size: 2.5em;
   }
 

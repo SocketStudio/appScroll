@@ -29,11 +29,11 @@ $(function(){
 	$ff4=$('#feature_foreground_4');
 	$ff5=$('#feature_foreground_5');
 	//iphone foregrounds
-	$if1=$('#iphone_foreground_1');
-	$if2=$('#iphone_foreground_2');
-	$if3=$('#iphone_foreground_3');
-	$if4=$('#iphone_foreground_4');
-	$iphone=$('#iphone');
+	$if1=$('#app_screen_1');
+	$if2=$('#app_screen_2');
+	$if3=$('#app_screen_3');
+	$if4=$('#app_screen_4');
+	$iphone=$('#iphone_area');
 	$tweets=$('#tweets');
 	
 	
@@ -95,7 +95,7 @@ $(function(){
 		
 	setInterval(placeOnScreen,wait);
   		
-  setTimeout(function(){$('.iphone_foreground').show()},wait)
+  setTimeout(function(){$('.app_screen').show()},wait)
 		
 	window.onscroll = scrolling;
 
