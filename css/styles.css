@@ -503,12 +503,10 @@ body {
 }
 
 .container {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding:95px 0;
   border-top: solid 1px white;
   border-bottom: solid 1px #ddd;
+  height:500px;
 }
 
 .threecol {
@@ -516,16 +514,15 @@ body {
 }
 
 
-#head {
+
+header#row {
   position: relative;
   overflow: visible;
 }
 
 
-#top_container {
+header.container {
   border-bottom: none;
-  padding-top: 40px;
-  padding-bottom: 0px;
 }
 
 footer {
@@ -573,13 +570,6 @@ footer h2 {
 
 
 
-
-#fb {
-  position: absolute;
-  left: 230px;
-  bottom: 7px;
-}
-
 /* ==== App Scroll =====================================================
    iphone scrolling area
    ========================================================================== */
@@ -602,9 +592,9 @@ footer h2 {
 #screen {
   position: absolute;
   top: 105px;
-  left: 26px;
-  width:251px;
-  height:378px;
+  left: 25px;
+  width:253px;
+  height:379px;
   overflow: hidden;
   z-index: 50;
 }
@@ -623,13 +613,12 @@ footer h2 {
   position: absolute;
   top: -9999999px;
   left: 0;
-  width:251px;
-  height:378px;
+  width:253px;
+  height:379px;
 }
 
 
 #app_screen_0 {
-  display: block;
   top: 0;
 }
 
