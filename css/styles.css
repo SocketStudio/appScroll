@@ -1,4 +1,4 @@
-/* 
+ /* 
  * HTML5 ✰ Boilerplate
  *
  * What follows is the result of much research on cross-browser styling. 
@@ -230,6 +230,12 @@ nav ul, nav ol {
   list-style-image: none;
   margin: 0;
   padding: 0;
+}
+
+li{
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 25px;
 }
 
 /* =============================================================================
@@ -486,6 +492,14 @@ li{
   list-style-type: none;
 }
 
+img.profile3up{
+  width: 100px;
+  margin: 15px;
+  border-radius: 50%;
+  moz-border-radius: 50%;
+  webkit-border-radius: 50%;
+}
+
 
 /* ==== App Scroll =====================================================
    structure styles
@@ -536,6 +550,9 @@ footer h2 {
   background-color: #FAFAFA;
 }
 
+.imageBackground1{
+  background:  url('../img/google_map.png') repeat scroll center center;
+}
 
 .dark_organic_background {
   padding-top: 30px;
