@@ -512,7 +512,21 @@ li{
 
 .listImageLeft{
   float: left;
-  margin-right: 15px;
+  width: 25%;
+  margin-right: 5%;
+}
+
+.listTextRight{
+  float: right;
+  width: 70%;
+}
+
+#socialButtons{
+  margin-bottom: 10px;
+}
+
+.socialButton{
+  margin-right: 10px;
 }
 
 
@@ -525,7 +539,6 @@ body {
   background: transparent url("/assets/splash_page/background_noise.gif") repeat;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
-  font-size: 16px;
   font-size: 16px;
   padding-top: 0px;
   overflow-x: hidden;
@@ -549,8 +562,9 @@ header#row {
   overflow: visible;
 }
 
-footer {
-  height: 700px;
+#footer {
+  min-height: 400px;
+
 }
 
 
@@ -566,7 +580,11 @@ footer h2 {
 }
 
 .imageBackground1{
-  background:  url('../img/big_background1.jpg') repeat scroll center center;
+  background:  url('../img/big_background1.jpg') no-repeat scroll center center;
+}
+
+.footerBackground{
+    background: #eee  repeat scroll center center;
 }
 
 .dark_organic_background {
@@ -575,9 +593,6 @@ footer h2 {
 
 
 
-#footer{
-  min-height: 500px;
-}
 
 #copyright {
   font-size: .8em;
@@ -1006,11 +1021,6 @@ input[type=submit]:hover {
     display: none;
   }
 
-  
-  body {
-    font-size: 16px;
-    -webkit-text-size-adjust: none;
-  }
 
   
   .row, body, .container {
