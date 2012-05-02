@@ -492,12 +492,27 @@ li{
   list-style-type: none;
 }
 
-img.profile3up{
-  width: 100px;
-  margin: 15px;
-  border-radius: 50%;
+.round{
+    border-radius: 50%;
   moz-border-radius: 50%;
   webkit-border-radius: 50%;
+}
+
+#appStoreButtonTop{
+  margin-top: 20px;
+}
+
+#headline{
+
+}
+
+#subhead{
+  margin-top: 10px;
+}
+
+.listImageLeft{
+  float: left;
+  margin-right: 15px;
 }
 
 
@@ -551,7 +566,7 @@ footer h2 {
 }
 
 .imageBackground1{
-  background:  url('../img/google_map.png') repeat scroll center center;
+  background:  url('../img/big_background1.jpg') repeat scroll center center;
 }
 
 .dark_organic_background {
@@ -560,7 +575,9 @@ footer h2 {
 
 
 
-
+#footer{
+  min-height: 500px;
+}
 
 #copyright {
   font-size: .8em;
