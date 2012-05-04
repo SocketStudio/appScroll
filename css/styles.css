@@ -632,7 +632,7 @@ footer h2 {
 /* ==== App Scroll =====================================================
    iphone scrolling area
    ========================================================================== */
-#iphone_area {
+#iphone {
   position: fixed;
   top: 40px;
   z-index: 50;
