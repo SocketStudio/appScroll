@@ -11,93 +11,71 @@
 
 //--POSITION IPHONE SCREENS
 
-$(function(){
-  //--VARIABLES
-  var speed=0.64;
-  var height_diff=-95; //negative number is higher up the page
-  var iphone_top, $iphone,$tweets,$onscreen,$feature_foregrounds,$app_screens,bottom_thresh;
-  var count=5;
-  var wait=1000;
-  $onscreen=$('#onscreen');
-  var current_scroll=window.scrollY||document.documentElement.scrollTop;
-	$onscreen.css("top",-current_scroll+"px");
-	$iphone=$('#iphone');
-	$tweets=$('#tweets');
-	$feature_foregrounds=$(".feature_foreground");
-	$app_screens=$(".app_screen");
-	bottom_thresh = $($feature_foregrounds[$feature_foregrounds.length-1]).offset().top;
-	
-	
-	function scrolling(){
-	    var screen_pos;
-	    current_scroll=window.scrollY||document.documentElement.scrollTop;
-	    
-	  
-	      if(current_scroll<bottom_thresh){
-	        screen_pos=current_scroll*speed;
-	        $onscreen.css("top",-screen_pos+"px");
-	        $iphone.css({"position":"","top":""});
-	        iphone_top=null;
-	    }//if within the threshold
-	    else{
-	      if(iphone_top===null)
-	        iphone_top=bottom_thresh;//$("#iphone").offset().top;
-	        screen_pos=(bottom_thresh)*speed;
-	        $onscreen.css("top",-screen_pos+"px");
-	        $iphone.css({"position":"absolute","top":iphone_top+"px"});
+var scroller={};
 
-	    }//else
-  }// function scrolling
-	
-	function placeOnScreen(){ 
+scroller.init=function(){
+	this.speed=0.6;
+	this.height_diff=-100; //negative number is higher up the page
+	this.count=5;
+	this.wait=1000;
+	this.$onscreen=$('#onscreen');
+	var current_scroll=window.scrollY||document.documentElement.scrollTop;
+
+	this.$iphone=$('#iphone');
+	this.$tweets=$('#tweets');
+	this.$features=$(".feature");
+	this.bottom_thresh = $(this.$features[this.$features.length-1]).offset().top;
+
+	this.$onscreen.css("top",-current_scroll+"px");
+}
+
+scroller.scrolling=function(){
+	var screen_pos, iphone_top, current_scroll=window.scrollY||document.documentElement.scrollTop;
+	if(current_scroll<scroller.bottom_thresh){
+		screen_pos=current_scroll*scroller.speed;
+		scroller.$onscreen.css("top",-screen_pos+"px");
+		scroller.$iphone.css({"position":"","top":""});
+		scoller.iphone_top=null;
+	}//if within the threshold
+	else{
+		if(scroller.iphone_top===null)
+		scroller.iphone_top=this.bottom_thresh;//$("#iphone").offset().top;
+		screen_pos=(this.bottom_thresh)*this.speed;
+		scroller.$onscreen.css("top",-screen_pos+"px");
+		scroller.$iphone.css({"position":"absolute","top":scroller.iphone_top+"px"});
+	}//else
+  }//scrolling
+
+scroller.placeOnScreen=function(){ 
     
-    if(window.scrollY>=bottom_thresh) scrolling();
+    if(window.scrollY>=scroller.bottom_thresh) scroller.scrolling();
     
-    $feature_foregrounds.each(function(i){
-    	var top=$(this).offset().top
-    	top+=height_diff;
-    	top*=speed;
-    	$($app_screens[i+1]).css("top",top+"px");
-    })
-    /*
-	var background_top1=$ff1.offset().top;
-	background_top1+=height_diff;
-	background_top1*=speed;
-	$if1.css("top",background_top1+"px");
-  
-    var background_top2=$ff2.offset().top;
-	background_top2+=height_diff;
-	background_top2*=speed;
-	$if2.css("top",background_top2+"px");
-	
-		var background_top3=$ff3.offset().top;
-		background_top3+=height_diff;
-		background_top3*=speed;
-		$if3.css("top",background_top3+"px");
-  
-  
-    var background_top4=$ff4.offset().top;
-		background_top4+=height_diff-0;
-		background_top4*=speed;
-		$if4.css("top",background_top4+"px");
-		
-		var background_top5=$ff5.offset().top;
-		background_top5+=height_diff;
-		bottom_thresh=background_top5;
-		background_top5*=speed;
-		$tweets.css("top",background_top5+"px");
-	
-		*/
+    scroller.$features.each(function(i){
+    	var $this=$(this), top=$this.offset().top
+    	top+=scroller.height_diff;
+    	top*=scroller.speed;
+    	$app_screen=$this.parents('.container')
+    					.children('.app_screen')
+    					.css("top",top+"px")
+    					.remove()
+    					.appendTo(scroller.$onscreen); 
+
+    });
+
+    $('.app_screen').fadeIn(2000);
 
   	
-		}//function placeOnScreen
-		
-	setInterval(placeOnScreen,wait);
-  		
-  setTimeout(function(){$('.app_screen').show()},wait)
-		
-	window.onscroll = scrolling;
+}//function placeOnScreen
 
+$(function(){
+  //--VARIABLES
+
+	
+	scroller.init();
+	scroller.placeOnScreen();
+	window.onscroll = scroller.scrolling;
+
+	
 
 });
 
